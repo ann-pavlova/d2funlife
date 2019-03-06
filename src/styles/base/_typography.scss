@@ -1,0 +1,138 @@
+// HEADINGS
+h1 {
+    $fz: (26px 30px) (32px 38px) (32px 38px);
+    @include font-size($fz);
+}
+
+h2 {
+    $fz: (22px 26px) (28px 32px) (28px 32px);
+    @include font-size($fz);
+}
+
+h3 {
+    $fz: (16px 20px) (20px 24px) (20px 24px);
+    @include font-size($fz);
+}
+
+h4 {
+    $fz: (14px 22px) (14px 22px) (17px 28px);
+    @include font-size($fz);
+}
+
+h5 {
+    $fz: (14px 22px) (14px 22px) (15px 24px);
+    @include font-size($fz);
+}
+
+h6 {
+    $fz: (12px 20px) (12px 20px) (14px 22px);
+    @include font-size($fz);
+}
+
+// BLOCKQUOTE
+$blockquote-color: #8a8a8a;
+$blockquote-border-size: 1px;
+$blockquote-border-color: #cacaca;
+$blockquote-font-family: $font;
+$blockquote-font-size: 16px;
+$blockquote-name-font-family: $font;
+$blockquote-name-font-size: 14px;
+
+blockquote {
+    @include rhythm-margins(1);
+    position: relative;
+    font-style: italic;
+    font-size: 14px;
+
+    &:before {
+        content: '//';
+        display: inline-block;
+        color: $accent;
+        margin-right: 10px;
+        font-weight: 900;
+    }
+}
+
+cite {
+    font-size: $blockquote-name-font-size;
+    line-height: $base-vertical-rhythm;
+    font-family: $blockquote-name-font-family;
+    display: block;
+
+    &:before {
+        content: '\2014 \0020';
+    }
+}
+
+
+// SMALL
+$small-font-size: $base-font-size - 2;
+
+small {
+    font-size: $small-font-size;
+}
+
+// PARAGRAPH
+$paragraph-margin-bottom: 1; // rhythm unit
+p {
+    @include margin-trailer($paragraph-margin-bottom);
+}
+
+// LINKS
+$link-color: #0000ff;
+$link-color-hover: lighten($link-color, 5%);
+$link-color-active: darken($link-color, 5%); // :active state
+$link-text-decoration: reset;
+
+a {
+    color: $link-color;
+
+    @if ($link-text-decoration == 'normal') {
+        text-decoration: none;
+    } @else if ($link-text-decoration == 'invert') {
+        text-decoration: underline;
+    } @else if ($link-text-decoration == 'reset') {
+        text-decoration: none;
+    }
+
+    @media #{$large-up} {
+        &:hover {
+            @if ($link-text-decoration == 'normal') {
+                text-decoration: underline;
+            } @else if ($link-text-decoration == 'invert') {
+                text-decoration: none;
+            } @else if ($link-text-decoration == 'reset') {
+                text-decoration: none;
+            }
+        }
+
+        &:active {
+            color: $link-color-active;
+        }
+    }
+}
+
+// LISTS
+$list-color: $black;
+$list-bullet-color: $accent;
+$list-line-height: 28px;
+$list-sublist-padding-left: 2; // gutter value
+$list-margin-bottom: $paragraph-margin-bottom; // rhythm unit
+
+// b, strong
+b,
+strong {
+    font-family: $font;
+    font-weight: 700;
+}
+
+// i, em
+i,
+em {
+    font-family: $font;
+    font-style: italic;
+}
+
+#disqus_thread a {
+    color: #1daf99;
+}

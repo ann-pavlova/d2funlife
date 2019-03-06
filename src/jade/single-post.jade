@@ -1,0 +1,82 @@
+extends _layout
+include mixins/all-mixins
+block title
+    title Cтатья
+block content
+    .b-accent-block
+    .l-container
+        .l-header
+            .b-header
+                .b-header__inner.l-container__row
+                    a(href='javascript:;').b-header__logo
+                        +svg('logo')
+                    .b-header__menu
+                        +svg('burger', 'j-burger')
+    .l-container
+        .l-main
+            .b-single-post
+                .b-post__inner
+                    .b-single-post__block
+                        img(src='../img/photo.jpg')
+                        .b-single-post__block-inner
+                            .b-single-post__top
+                                .b-post__date.b-single-post__date
+                                    .b-post__date-num 14
+                                    .b-post__date-month фев 2017
+                                .b-single-post__ttl
+                                    h1.b-post__ttl Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    .b-post__info.b-single-post__tags
+                                        ul.b-post__tags
+                                            li.b-post__tag
+                                                a.b-post__tag-link(href="#")
+                                                    +svg('tag', 'b-post__tag-icon')
+                                                    .b-post__tag-link-txt .NET
+                                            li.b-post__tag
+                                                a.b-post__tag-link(href="#")
+                                                    +svg('tag', 'b-post__tag-icon')
+                                                    .b-post__tag-link-txt HTML
+                                            li.b-post__tag
+                                                a.b-post__tag-link(href="#")
+                                                    +svg('tag', 'b-post__tag-icon')
+                                                    .b-post__tag-link-txt верстка
+                            .b-single-post__txt
+                                p Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                blockquote Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                p Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                p Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                h2 Lorem ipsum dolor sit amet, conse sed do eiusmod
+                                p Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                a.b-single-post__gallery(href="#gallery-popup")
+                                    img(src="../img/1.jpg")
+                                .b-gallery.hidden(id="gallery-popup")
+                                    a.b-gallery__link(href="../img/2.jpg")
+                                        | test
+                                    a.b-gallery__link(href="../img/3.jpg")
+                                        | test
+                                    a(href="../img/4.jpg")
+                                    a(href="../img/5.jpg")
+                                p Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                h3 Lorem ipsum dolor sit amet, conse sed do eiusmod
+                                p Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                img(src='../img/photo.jpg')
+                                img(src='../img/photo.jpg')
+                                ol
+                                    li test
+                                    li testing blog
+                                    li Lorem ipsum dolor sit amet, conse
+                                p Lorem ipsum dolor sit amet, <a href="#">test</a> conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                ul
+                                    li test
+                                    li testing blog
+                                    li Lorem ipsum dolor sit amet, conse
+                                p Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                p Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    include _menu
+    .b-accent-block_position_bottom
+    .l-container
+        .b-copy
+            div &copy; Даниил Павлов 2015-2017
+            div Создано с использованием ASP.NET Core 1.1, Entity Framework Core 1.1
+    a(href="#" class="back-to-top j-btn-top")
+        +svg('up').b-arrow

@@ -1,0 +1,88 @@
+$btn-color: $main;
+$btn-bd-width: 1px;
+$btn-bd-color: $main;
+$btn-font-size: $base-font-size;
+$btn-line-height: $base-line-height;
+$btn-font-family: $font;
+$btn-height: 3; //rhythm unit
+$btn-tt-uppercase: false;
+
+//hover
+$btn-color-hover: $black;
+$btn-bg-color-hover: $white;
+$btn-bd-color-hover: $white;
+
+//active
+$btn-color-active: $white;
+$btn-bg-color-active: $black;
+
+//disabled
+$btn-bd-color-disabled: transparent;
+$btn-color-disabled: #ccc;
+$btn-bg-color-disabled: #eee;
+
+// Button
+.b-btn {
+    @include transition(color, background-color, border-color);
+    @include btn-vertical-paddings($btn-height);
+    color: $btn-color;
+    font-size: $btn-font-size;
+    line-height: $btn-line-height;
+    font-family: $btn-font-family;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    padding: {
+        left: gutter(1);
+        right: gutter(1);
+    };
+    position: relative;
+    width: 100%;
+
+    display: inline-block;
+    overflow: hidden;
+    transition: .3s ease;
+
+    @media #{$large-up} {
+        &:hover,
+        &:focus {
+            text-decoration: none;
+
+            &:after,
+            &:before {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        height: 1em;
+        width: 1em;
+        border-bottom: 2px solid $main;
+        border-left: 2px solid $main;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: .3s ease;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        height: 1em;
+        width: 1em;
+        border-top: 2px solid $main;
+        border-right: 2px solid $main;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: .3s ease;
+    }
+}
+
+// STATE
+@import '../state/btn';

@@ -1,0 +1,33 @@
+.b-copy {
+    @include span(10 last);
+    @include margin-trailer(2);
+    color: $menu-tag-color;
+    text-align: right;
+    font-size: 12px;
+    
+    @media #{$medium-up} {
+        @include span(12);
+        padding: 0 30px;
+    }
+
+    @media #{$big-up} {
+        @include span(10 last);
+        @include margin-trailer(2);
+    }
+
+    @media #{$large-up} {
+        @include span(8 last);
+        padding: 0;
+    }
+}
+
+.b-copy__link {
+    @include transition(border-bottom);
+    border-bottom: 1px solid currentColor;
+
+    @media #{$large-up} {
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}

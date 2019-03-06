@@ -1,0 +1,202 @@
+extends _layout
+include mixins/all-mixins
+block title
+    title Главная страница
+block content
+    .b-accent-block
+    .l-container
+        .l-header
+            .b-header
+                .b-header__inner.l-container__row
+                    a(href='javascript:;').b-header__logo
+                        +svg('logo')
+                    .b-header__menu
+                        +svg('burger', 'j-burger')
+        .l-main
+            .l-container__row
+                .b-post__posts.j-masonry
+                    .b-post__h1
+                        h1 D2funlife
+                    .b-post
+                        .b-post__inner
+                            .b-post__top
+                                img(src='../img/7.jpg')
+                                .b-post__date.b-post__date_position_absolute
+                                    .b-post__date-num 14
+                                    .b-post__date-month фев 2017
+                            .b-post__block
+                                a(href="#")
+                                    h2.b-post__ttl Lorem ipsum dolor sit amet, conse sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                .b-post__info
+                                    ul.b-post__tags
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt .NET
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt HTML
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt верстка
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                            .b-post__btn
+                                a(href="#").b-btn Читать
+                    .b-post
+                        .b-post__inner
+                            .b-post__top
+                                img(src='https://97ubcw-bn1305.files.1drv.com/y4mRnWdN8cM5E9heEtnQLHM_FHF1oOxN6VQ92zWEUxVbvANYWfVAQQirnRAIL1T30PYBnY0NqNXQECjeYpQd5K6ACdFrEEkKbq5UA1wcQbQNbwAVQ3iopBobu1cQk7Ea_eNoQ_2Vz-oIBs9oRyU6z6M5Dld-YSOiAT_JnbKhNrlKS-WFHBtkr17xB1UwR-zKfud2-nF-XOmgV3lPUUooixdLg?width=542&amp;height=411&amp;cropmode=none')
+                                .b-post__date.b-post__date_position_absolute
+                                    .b-post__date-num 14
+                                    .b-post__date-month янв 2017
+                            .b-post__block
+                                a(href="#")
+                                    h2.b-post__ttl Lorem ipsum dolor sit amet, conse sed.
+                                .b-post__info
+                                    ul.b-post__tags
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt .NET
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt HTML
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt верстка
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                            .b-post__btn
+                                a(href="#").b-btn Читать
+                    .b-post
+                        .b-post__inner
+                            .b-post__top
+                                img(src='../img/1.jpg')
+                                .b-post__date.b-post__date_position_absolute
+                                    .b-post__date-num 14
+                                    .b-post__date-month дек 2017
+                            .b-post__block
+                                a(href="#")
+                                    h2.b-post__ttl Lorem ipsum dolor sit amet, conse sed.
+                                .b-post__info
+                                    ul.b-post__tags
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt .NET
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt HTML
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt верстка
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                            .b-post__btn
+                                a(href="#").b-btn Читать
+                    .b-post
+                        .b-post__inner
+                            .b-post__top
+                                img(src='../img/4.jpg')
+                                .b-post__date.b-post__date_position_absolute
+                                    .b-post__date-num 14
+                                    .b-post__date-month нояб 2017
+                            .b-post__block
+                                a(href="#")
+                                    h2.b-post__ttl Lorem ipsum dolor sit amet, conse sed.
+                                .b-post__info
+                                    ul.b-post__tags
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt верстка
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt .NET
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt HTML
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                            .b-post__btn
+                                a(href="#").b-btn Читать
+                    .b-post
+                        .b-post__inner
+                            .b-post__top
+                                img(src='../img/4.jpg')
+                                .b-post__date.b-post__date_position_absolute
+                                    .b-post__date-num 14
+                                    .b-post__date-month нояб 2017
+                            .b-post__block
+                                a(href="#")
+                                    h2.b-post__ttl Lorem ipsum dolor sit amet, conse sed.
+                                .b-post__info
+                                    ul.b-post__tags
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt верстка
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt .NET
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt HTML
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                            .b-post__btn
+                                a(href="#").b-btn Читать
+                    .b-post
+                        .b-post__inner
+                            .b-post__top
+                                img(src='../img/5.jpg')
+                                .b-post__date.b-post__date_position_absolute
+                                    .b-post__date-num 14
+                                    .b-post__date-month нояб 2017
+                            .b-post__block
+                                a(href="#")
+                                    h2.b-post__ttl Lorem ipsum dolor sit amet, conse sed.
+                                .b-post__info
+                                    ul.b-post__tags
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt верстка
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt .NET
+                                        li.b-post__tag
+                                            a.b-post__tag-link(href="#")
+                                                +svg('tag', 'b-post__tag-icon')
+                                                .b-post__tag-link-txt HTML
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                            .b-post__btn
+                                a(href="#").b-btn Читать
+            .b-post__navigation
+                a(href="#").b-post__navigation-btn.b-post__navigation-prev
+                    +svg('prev', 'b-post__nav')
+                a(href="#").b-post__navigation-btn.b-post__navigation-next.is-active
+                    +svg('next', 'b-post__nav')
+    include _menu
+    .b-accent-block_position_bottom
+    .l-container.b-post__footer
+        .b-copy
+            div &copy; Даниил Павлов 2015-2017
+            div Создано с использованием ASP.NET Core 1.1, Entity Framework Core 1.1
+                a(href="#").b-copy__link исходный код
+    a(href="#").back-to-top.j-btn-top
+        +svg('up').b-arrow

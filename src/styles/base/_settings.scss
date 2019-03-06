@@ -1,0 +1,61 @@
+// COLORS
+$black: #000;
+$white: #fff;
+$base-font-color: #333640;
+$gray: #fafafa;
+$main: #5c6bd0;
+$accent: #1daf99;
+$tag-color: #929396;
+$menu-tag-color: rgba($white, .7);
+$dark-gray: #303d54;
+
+// TYPOGRAPHY
+// -----------------------------------
+// Fonts name
+$font:  Verdana, Geneva, sans-serif;
+
+// Vertical rhythm
+$base-font-size: 16px;
+$base-vertical-rhythm: 10px;
+$base-line-height: 24px;
+$rhythm-unit: 'px';
+$round-to-nearest-half-line: true;
+// Vertical rhythm debug
+$vertical-rhythm-debug: false;
+$vertical-rhythm-color-lines: #000;
+
+// GRID
+// -----------------------------------
+$columns: 12;
+$gutter-width-mobile: 30px;
+$gutter-width: 40px;
+$column-width: 60px;
+
+
+// BREAKPOINTS
+// -----------------------------------
+$small-upper-bound: 670px;
+$medium-upper-bound: 959px;
+$big-upper-bound: 1279px;
+$large-upper-bound: 1439px;
+
+// Z-INDEX MANAGEMENT
+// -----------------------------------
+$z-layers: (
+    'hide': -1,
+    'zero': 0,
+    'default': 1,
+    'nav': 2,
+);
+
+
+// GLOBAL SETTINGS
+// -----------------------------------
+
+// Transition  property
+$gl-trs-duration: .3s;
+$gl-trs-function: ease;
+
+// Text transform letterspacing
+$gl-letter-spacing: .2em;
+

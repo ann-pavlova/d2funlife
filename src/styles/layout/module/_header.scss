@@ -1,0 +1,7 @@
+.l-header {
+    @include rhythm-padding(2);
+
+    @media #{$large-up} {
+        @include rhythm-padding(4.5);
+    }
+}

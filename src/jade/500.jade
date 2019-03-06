@@ -1,0 +1,25 @@
+include mixins/all-mixins
+doctype html
+html(lang='ru')
+    head
+        meta(charset="UTF-8")
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        link(rel='shortcut icon' type='image/x-icon' href='/favicons/favicon.ico')
+        link(rel='stylesheet' href="/styles/app.css")
+
+        block title
+            title 505
+    body
+        .l-error-page
+            .b-error-page
+                .b-accent-block.b-accent-block_color_accent
+                .l-container.b-error-page__wrap
+                    .b-error-page__inner
+                        .b-error-page__img
+                            img(src="/img/500.png")
+                        .b-error-page__text-block
+                            div ошибка
+                            .b-error-page__num 500
+                            .b-error-page__ttl упс, вы ничего не видели
+                            a(href="#").b-error-page__link на главную
+

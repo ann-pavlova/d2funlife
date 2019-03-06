@@ -1,0 +1,182 @@
+// PROJECT MIXINS
+// Adaptive typography
+@mixin font-size($typos) {
+    $small-fz: nth(nth($typos, 1), 1);
+    $small-lh: nth(nth($typos, 1), 2);
+    $medium-fz: nth(nth($typos, 2), 1);
+    $medium-lh: nth(nth($typos, 2), 2);
+    $large-fz: nth(nth($typos, 3), 1);
+    $large-lh: nth(nth($typos, 3), 2);
+
+    font-size: $small-fz;
+    line-height: $small-lh;
+
+    @media #{$medium-up} {
+        font-size: $medium-fz;
+        line-height: $medium-lh;
+    }
+
+    @media #{$large-up} {
+        font-size: $large-fz;
+        line-height: $large-lh;
+    }
+}
+
+// Create triangle
+@mixin triangle($side: top, $color: $black, $size: 16px) {
+    $border: $size solid transparent;
+    width: 0;
+    height: 0;
+
+    @if not index(top right bottom left, $side) {
+        @warn 'Неправльное значение. Попробуйте - top, right, bottom или left.';
+    } @else {
+
+        @if $side == 'top' or $side == 'bottom' {
+            border-left: $border;
+            border-right: $border;
+        }
+
+        @if $side == 'left' or $side == 'right' {
+            border-top: $border;
+            border-bottom: $border;
+        }
+
+        border-#{opposite_position($side)}: $size * 1.5 solid $color;
+    }
+}
+
+// GLOBAL MIXINS
+// -----------------------------------
+// Debug vertical rhythm
+@mixin vr-debug($lines-color: $black) {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        background: repeating-linear-gradient(180deg, transparent, transparent $base-vertical-rhythm - 1px, $lines-color $base-vertical-rhythm);
+        content: '';
+    }
+}
+
+// Import fonts
+@mixin font($family, $src, $weight: false, $style: false) {
+    @font-face {
+        font-family: quote($family);
+        src: url('/fonts/' + $src + '.eot');
+        src: url('/fonts/' + $src + '.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/' + $src + '.ttf') format('truetype'),
+            url('/fonts/' + $src + '.woff') format('woff');
+
+        @if($weight) {
+            font-weight: $weight;
+        }
+
+        @if($style) {
+            font-style: $style;
+        }
+    }
+}
+
+// Transition
+@mixin transition($prop...) {
+    transition-property: $prop;
+    transition-duration: $gl-trs-duration;
+    transition-timing-function: $gl-trs-function;
+}
+
+@mixin unstyled-link {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+// Hide text
+@mixin squish-text {
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+}
+
+// Text transform uppercase
+@mixin text-transform($letter-spacing: $gl-letter-spacing) {
+    text-transform: uppercase;
+
+    @if ($letter-spacing != false) {
+        letter-spacing: $letter-spacing;
+    }
+
+}
+
+// Buton vertical paddings
+@mixin btn-vertical-paddings($height) {
+    @if rhythm($height) < $base-vertical-rhythm {
+        line-height: ($base-vertical-rhythm / 2) - ($btn-bd-width * 2);
+        padding: {
+            top: 0;
+            bottom: 0;
+        };
+        font-size: 8px;
+    } @else if rhythm($height) == $base-vertical-rhythm {
+        line-height: $base-vertical-rhythm - ($btn-bd-width * 2);
+        padding: {
+            top: 0;
+            bottom: 0;
+        };
+    } @else {
+        $paddings: ((rhythm($height) - $base-vertical-rhythm) / 2) - ($btn-bd-width);
+        padding: {
+            top: $paddings;
+            bottom: $paddings;
+        };
+    }
+}
+
+// Vertical rhythm
+@mixin margin-trailer($number) {
+    margin-bottom: $number * $base-vertical-rhythm;
+}
+
+@mixin margin-leader($number) {
+    margin-top: $number * $base-vertical-rhythm;
+}
+
+@mixin padding-trailer($number) {
+    padding-bottom: $number * $base-vertical-rhythm;
+}
+
+@mixin padding-leader($number) {
+    padding-top: $number * $base-vertical-rhythm;
+}
+
+@mixin rhythm-padding($top, $bottom: $top) {
+    padding: {
+        top: $top * $base-vertical-rhythm;
+        bottom: $bottom * $base-vertical-rhythm;
+    };
+}
+
+@mixin rhythm-margins($top, $bottom: $top) {
+    margin: {
+        top: $top * $base-vertical-rhythm;
+        bottom: $bottom * $base-vertical-rhythm;
+    };
+}
+
+@function rhythm($number) {
+    @return $number * $base-vertical-rhythm;
+}
+
+@mixin row(){
+    margin: 0 (-($gutter-width/2));
+}

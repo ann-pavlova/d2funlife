@@ -1,0 +1,40 @@
+.b-accent-block {
+  background-color: $main;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  @media #{$large-up} {
+    transform: rotate(-5deg) translateX(-45px);
+    height: 500px;
+    top: -245px;
+    width: 105%;
+  }
+}
+
+.b-accent-block_color_accent {
+  background-color: $accent;
+}
+
+.b-accent-block_color_gray {
+  background-color: $gray;
+}
+
+.b-accent-block_position_bottom {
+  background-color: $main;
+  width: 100%;
+  height: 240px;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+
+  @media #{$large-up} {
+    transform: rotate(-5deg) translateX(-45px);
+    z-index: 1;
+    height: 500px;
+    bottom: -365px;
+    width: 107%;
+  }
+}

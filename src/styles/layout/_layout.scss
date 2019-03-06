@@ -1,0 +1,6 @@
+%l-row {
+    @include container;
+    @include margin-trailer(1);
+}
+
+@import 'main';

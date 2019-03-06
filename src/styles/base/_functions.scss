@@ -1,0 +1,20 @@
+@function lower-bound($range) {
+
+    @if length($range) <= 0 {
+        @warn 'В функцию передана некорректная переменная';
+        @return 0;
+    }
+
+    @return nth($range, 1);
+}
+
+// Возвращает последнее значение передаваемого списка
+@function upper-bound($range) {
+
+    @if length($range) < 2 {
+        @warn 'Некоректное количество элементов в передаваемом списке';
+        @return 999999999999;
+    }
+
+    @return nth($range, 2);
+}

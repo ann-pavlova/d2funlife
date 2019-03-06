@@ -1,0 +1,20 @@
+include mixins/all-mixins
+doctype html
+html(lang='ru')
+    head
+        meta(charset="UTF-8")
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        link(rel='shortcut icon' type='image/x-icon' href='/img/favicons/favicon.ico')
+        link(rel='stylesheet' href="/styles/app.css")
+
+        block title
+            title Login
+    body
+        .l-login
+            .b-login__wrap
+                .b-login
+                    h2 Login
+                    .b-login__btn-wrap
+                        button.b-btn.b-login__btn Google
+                        button.b-btn.b-login__btn Twitter
+                        button.b-btn.b-login__btn Microsoft

@@ -1,0 +1,5 @@
+mixin svg(name, modify)
+    -modify = modify || ''
+    svg(class="b-icon__#{name} #{modify}")
+        use(xlink:href="/img/sprite/sprite.svg##{name}")
+

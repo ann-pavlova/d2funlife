@@ -1,0 +1,30 @@
+// LAYOUT
+@import '../layout/module/header';
+
+// MODULE
+.b-header {
+  @include grid-clearfix();
+}
+
+.b-header__logo {
+  @include span(9);
+
+  @media #{$medium-up} {
+    @include span(3);
+  }
+}
+
+.b-header__menu {
+  @include span(3 last);
+  text-align: right;
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.b-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

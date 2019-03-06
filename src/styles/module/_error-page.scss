@@ -1,0 +1,103 @@
+.b-error-page {
+  background-color: $dark-gray;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.b-error-page__inner {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.b-error-page__wrap {
+  display: flex;
+  height: 100%;
+}
+
+.b-error-page__img {
+  @include span(8);
+  @include margin-trailer(3);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media #{$medium-up} {
+    @include span(6);
+  }
+
+  @media #{$big-up} {
+    @include span(6);
+    margin: 0;
+  }
+}
+
+.b-error-page__text-block {
+  @include span(12);
+  text-align: center;
+  color: $white;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media #{$medium-up} {
+    font-size: 26px;
+    line-height: 28px;
+  }
+
+  @media #{$big-up} {
+    @include span(6);
+    font-size: 38px;
+    line-height: 40px;
+  }
+}
+
+.b-error-page__num {
+  font-size: 100px;
+  line-height: 102px;
+
+  @media #{$medium-up} {
+    font-size: 200px;
+    line-height: 202px;
+  }
+
+  @media #{$big-up} {
+    font-size: 250px;
+    line-height: 252px;
+  }
+}
+
+.b-error-page__ttl {
+  @include margin-trailer(1);
+  font-size: 20px;
+  line-height: 22px;
+
+  @media #{$medium-up} {
+    font-size: 50px;
+    line-height: 52px;
+  }
+
+  @media #{$big-up} {
+    font-size: 62px;
+    line-height: 64px;
+  }
+}
+
+.b-error-page__link {
+  @include transition(border-bottom);
+  color: $white;
+  font-size: 16px;
+  line-height: 18px;
+  border-bottom: 1px solid $white;
+
+  @media #{$large-up} {
+    &:hover,
+    &:focus {
+      color: $white;
+      border-bottom: 1px solid transparent;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+// GRID
+// Settings
+$columns: 12 !default;
+$gutter-width-mobile: 30px;
+$gutter-width: 40px !default;
+$column-width: 60px !default;
+
+// Variable
+$grid-container-width: ($columns * $column-width) + ($columns * $gutter-width); // (12 * 80) + (12 * 20) = 960
+
+// Functions
+@function gutter($gutter: 1) {
+    $gutter: ($gutter * $gutter-width) / 2;
+    @return $gutter;
+}
+
+@function span($column: 1, $of: $columns) {
+
+    @if $column == 'full' {
+        $column: $columns;
+    }
+
+    @if $column == 'half' {
+        $column: $columns / 2;
+    }
+
+    @if ($column > $columns or $column <= -1) {
+        @error 'Указано неверное количество колонок';
+    } @else {
+        $span-width: $column / $of * 100%;
+        @return $span-width;
+    }
+}
+
+// Mixins
+@mixin grid-clearfix() {
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+
+@mixin container($container-width: $grid-container-width) {
+    @include grid-clearfix();
+    max-width: $container-width;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+}
+
+
+@mixin gutter($gutter: 1) {
+    $gutter: gutter($gutter);
+
+    padding: {
+        left: $gutter;
+        right: $gutter;
+    };
+}
+
+@mixin push($column: 1) {
+    margin-left: span($column);
+}
+
+@mixin post($column: 1) {
+    margin-right: span($column);
+}
+
+@mixin span($column) {
+    $length: length($column);
+
+    @if $length > 1 {
+        @if nth($column, 2) == 'of' {
+            width: span(nth($column, 1), nth($column, 3));
+
+            @if nth($column, length($column)) == 'center' {
+                $margins: (nth($column, 3) - nth($column, 1)) / 2;
+
+                margin: {
+                    left: span($margins, nth($column, 3));
+                    right: span($margins, nth($column, 3));
+                };
+            }
+
+        } @else {
+            width: span(nth($column, 1), $columns);
+
+            @if nth($column, length($column)) == 'center' {
+                $margins: ($columns - nth($column, 1)) / 2;
+
+                @include push($margins);
+                @include post($margins);
+            }
+        }
+
+        @if nth($column, length($column)) == 'last' {
+            float: right;
+        } @else {
+            float: left;
+        }
+
+    } @else {
+        width: span($column, $columns);
+        float: left;
+    }
+
+    padding: {
+        left: $gutter-width-mobile / 2;
+        right: $gutter-width-mobile / 2;
+    };
+}
+
+@mixin prefix($column: 1) {
+    padding-left: span($column);
+}
+
+@mixin suffix($column: 1) {
+    padding-right: span($column);
+}
+
+@mixin first() {
+    float: left;
+}
+
+@mixin last() {
+    float: right;
+}
+
+@mixin gallery($column, $of: $columns) {
+    $g-column: floor($columns / $column);
+
+    @include span($column of $of);
+
+    @for $i from 1 through $g-column {
+        $span: $column * ($i - 1);
+
+        &:nth-child(#{$g-column}n+#{$i}) {
+            margin-left: span($span);
+            margin-right: -100%;
+            @if $i == 1 {
+                clear: both;
+            } @else {
+                clear: none;
+            }
+        }
+    }
+}
+

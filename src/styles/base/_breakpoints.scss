@@ -1,0 +1,37 @@
+$small-upper-bound: 670px !default;
+$medium-upper-bound: 959px !default;
+$big-upper-bound: 1279px !default;
+$large-upper-bound: 1439px !default;
+$xlarge-upper-bound: 1919px !default;
+
+$small-range: (0, $small-upper-bound);
+$medium-range: ($small-upper-bound + 1, $medium-upper-bound);
+$big-range: ($medium-upper-bound + 1, $big-upper-bound);
+$large-range: ($big-upper-bound + 1, $large-upper-bound);
+$xlarge-range: ($large-upper-bound + 1, $xlarge-upper-bound);
+$xxlarge-range: ($xlarge-upper-bound + 1, 10000px);
+
+$screen: 'only screen';
+
+$small-up: $screen;
+$small-only: '#{$screen} and (max-width: #{upper-bound($small-range)})';
+
+$medium-up: '#{$screen} and (min-width:#{lower-bound($medium-range)})';
+$medium-only: '#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})';
+
+$big-up: '#{$screen} and (min-width:#{lower-bound($big-range)})';
+$big-only: '#{$screen} and (min-width:#{lower-bound($big-range)}) and (max-width:#{upper-bound($big-range)})';
+
+$large-up: '#{$screen} and (min-width:#{lower-bound($large-range)})';
+$large-only: '#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})';
+
+$xlarge-up: '#{$screen} and (min-width:#{lower-bound($xlarge-range)})';
+
+$xxlarge-up: '#{$screen} and (min-width:#{lower-bound($xxlarge-range)})';
+
+$landscape: '#{$screen} and (orientation: landscape)';
+$portrait: '#{$screen} and (orientation: portrait)';
+
+$hidpi: '#{$screen} and (-webkit-min-device-pixel-ratio: 1.5),
+    #{screen} and (min-device-pixel-ratio: 1.5),
+    #{screen} and (min-resolution: 1.5dppx)';

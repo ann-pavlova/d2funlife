@@ -1,0 +1,31 @@
+html {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+
+body {
+    font-family: $font;
+    color: $base-font-color;
+    text-size-adjust: 100%;
+    width: 100%;
+    background-color: $gray;
+    overflow-x: hidden;
+}
+
+a {
+    &[href^='tel:'],
+    &[href^='mailto:'] {
+        white-space: nowrap;
+    }
+
+    color: $white;
+}
+
+// Utility
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

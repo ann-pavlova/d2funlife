@@ -1,0 +1,90 @@
+.b-icons__svg {
+    display: none;
+}
+
+.b-icon__vk {
+    width: 28px;
+    height: 20px;
+    fill: $tag-color;
+}
+
+.b-icon__facebook {
+    width: 15px;
+    height: 23px;
+    fill: $tag-color;
+}
+
+.b-icon__google {
+    width: 28px;
+    height: 23px;
+    fill: $tag-color;
+}
+
+.b-icon__twitter {
+    width: 25px;
+    height: 20px;
+    fill: $tag-color;
+}
+
+.b-icon__in {
+    width: 25px;
+    height: 25px;
+    fill: $tag-color;
+}
+
+.b-icon__github {
+    width: 23px;
+    height: 23px;
+    fill: $tag-color;
+}
+
+.b-icon__close {
+    width: 18px;
+    height: 18px;
+    fill: $white;
+}
+
+.b-icon__burger {
+    width: 47px;
+    height: 37px;
+    fill: $white;
+}
+
+.b-icon__next,
+.b-icon__prev {
+    width: 40px;
+    height: 40px;
+    fill: $white;
+
+    @media #{$large-up} {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.b-icon__up {
+    width: 30px;
+    height: 35px;
+    fill: $white;
+
+    @media #{$xlarge-up} {
+        fill: $tag-color;
+    }
+}
+
+.b-icon__tag {
+    width: 30px;
+    height: 30px;
+    fill: transparent;
+    stroke: $accent;
+}
+
+.b-icon__logo {
+    width: 90px;
+    height: 65px;
+
+    @media #{$large-up} {
+        width: 120px;
+        height: 91px;
+    }
+}
