@@ -1,40 +1,57 @@
 .b-accent-block {
-  background-color: $main;
   width: 100%;
-  height: 150px;
   position: absolute;
   top: 0;
   z-index: 1;
+  background-color: $main;
+  height: 150px;
+
+  svg {
+    fill: $main;
+    display: none;
+  }
 
   @media #{$large-up} {
-    transform: rotate(-5deg) translateX(-45px);
-    height: 500px;
-    top: -245px;
-    width: 105%;
+    height: 400px;
+    background-color: transparent;
+
+    svg {
+      display: block;
+    }
   }
 }
 
 .b-accent-block_color_accent {
-  background-color: $accent;
+  svg {
+    fill: $accent;
+  }
+}
+
+.b-accent-block_color_accent1 {
+  svg {
+    fill: #46daff;
+  }
+}
+
+.b-accent-block_color_accent2 {
+  svg {
+    fill: #8ff5a1;
+  }
 }
 
 .b-accent-block_color_gray {
-  background-color: $gray;
+  svg {
+    fill: $gray;
+  }
 }
 
 .b-accent-block_position_bottom {
-  background-color: $main;
-  width: 100%;
-  height: 240px;
-  position: absolute;
   bottom: 0;
+  top: auto;
+  height: 240px;
   z-index: 0;
 
   @media #{$large-up} {
-    transform: rotate(-5deg) translateX(-45px);
-    z-index: 1;
-    height: 500px;
-    bottom: -365px;
-    width: 107%;
+    height: 250px;
   }
 }

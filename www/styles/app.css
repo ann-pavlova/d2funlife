@@ -44,7 +44,6 @@ q:before, q:after, blockquote:before, blockquote:after {
 
 label {
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   cursor: pointer; }
@@ -355,7 +354,8 @@ a {
 .b-icon__burger {
   width: 47px;
   height: 37px;
-  fill: #fff; }
+  fill: #fff;
+  cursor: pointer; }
 
 .b-icon__next,
 .b-icon__prev {
@@ -1125,41 +1125,42 @@ a {
       padding: 0; } }
 
 .b-accent-block {
-  background-color: #5c6bd0;
   width: 100%;
-  height: 150px;
   position: absolute;
   top: 0;
-  z-index: 1; }
+  z-index: 1;
+  background-color: #5c6bd0;
+  height: 150px; }
+  .b-accent-block svg {
+    fill: #5c6bd0;
+    display: none; }
   @media only screen and (min-width: 1280px) {
     .b-accent-block {
-      -ms-transform: rotate(-5deg) translateX(-45px);
-      transform: rotate(-5deg) translateX(-45px);
-      height: 500px;
-      top: -245px;
-      width: 105%; } }
+      height: 400px;
+      background-color: transparent; }
+      .b-accent-block svg {
+        display: block; } }
 
-.b-accent-block_color_accent {
-  background-color: #1daf99; }
+.b-accent-block_color_accent svg {
+  fill: #1daf99; }
 
-.b-accent-block_color_gray {
-  background-color: #fafafa; }
+.b-accent-block_color_accent1 svg {
+  fill: #46daff; }
+
+.b-accent-block_color_accent2 svg {
+  fill: #8ff5a1; }
+
+.b-accent-block_color_gray svg {
+  fill: #fafafa; }
 
 .b-accent-block_position_bottom {
-  background-color: #5c6bd0;
-  width: 100%;
-  height: 240px;
-  position: absolute;
   bottom: 0;
+  top: auto;
+  height: 240px;
   z-index: 0; }
   @media only screen and (min-width: 1280px) {
     .b-accent-block_position_bottom {
-      -ms-transform: rotate(-5deg) translateX(-45px);
-      transform: rotate(-5deg) translateX(-45px);
-      z-index: 1;
-      height: 500px;
-      bottom: -365px;
-      width: 107%; } }
+      height: 250px; } }
 
 .b-copy {
   width: 83.33333%;
