@@ -284,7 +284,7 @@ gulp.task('browser-sync', function() {
 /**
  * UGLIFY
  */
-gulp.task('minify', ['css-nano', 'uglifyJS']);
+gulp.task('npm installify', ['css-nano', 'uglifyJS']);
 
 gulp.task('css-nano', ['styles'], function() {
     return gulp.src(paths.build.stylesFiles)
